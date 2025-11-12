@@ -1,0 +1,109 @@
+site_name: LGD 2025 GenBI Spotfire 문서
+site_description: LG Display GenBI Spotfire Copilot API 연동 프로젝트 문서
+site_author: LGD GenBI Team
+
+# Repository
+repo_name: lgd_2025_genbi_spotfire_docs
+repo_url: https://github.com/yourusername/lgd_2025_genbi_spotfire_docs
+
+# Theme
+theme:
+  name: material
+  language: ko
+  palette:
+    # 라이트 모드
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: 다크 모드로 전환
+    # 다크 모드
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: 라이트 모드로 전환
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - navigation.indexes
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+
+# Navigation
+nav:
+  - 홈: index.md
+  - 프로젝트 개요:
+      - 착수 보고서: kickoff_report.md
+  - 개발 가이드:
+      - 개발자용 코드 리뷰: code_review_for_developers.md
+  - 비즈니스 요구사항:
+      - 고객 확인사항: customer_business_questions.md
+  - README: README.md
+
+# Extensions
+markdown_extensions:
+  # 코드 하이라이팅
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  
+  # 경고 박스
+  - admonition
+  - pymdownx.details
+  
+  # 테이블
+  - tables
+  
+  # 목차
+  - toc:
+      permalink: true
+      toc_depth: 3
+  
+  # 기타
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.keys
+
+# Plugins
+plugins:
+  - search:
+      lang: ko
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: date
+
+# Extra
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/yourusername
+  generator: false
+
+# Extra CSS (선택사항)
+# extra_css:
+#   - stylesheets/extra.css
+
