@@ -1263,7 +1263,7 @@
 <tbody>
 <tr>
 <td>방화벽 예외 설정이 필요한가?</td>
-<td></td>
+<td>O - 관련해서 담당자 확인 필요</td>
 </tr>
 <tr>
 <td>IP 화이트리스트 (허용된 IP 목록)가 필요한가?</td>
@@ -1332,15 +1332,15 @@
 </tr>
 <tr>
 <td>가장 많이 사용할 질문 3가지는?</td>
-<td></td>
+<td>24년 A4공장 TCVD 설비군의 생산가동률 (또는 수율 또는 현위치) 알려줘 등 기존 질문들</td>
 </tr>
 <tr>
 <td>하루 예상 사용 횟수는? (1인당)</td>
-<td></td>
+<td>관리자용 내부 대시보드 참조</td>
 </tr>
 <tr>
 <td>주로 언제 사용하는가? (시간대, 상황)</td>
-<td></td>
+<td>관리자용 내부 대시보드 참조</td>
 </tr>
 </tbody>
 </table>
@@ -1356,23 +1356,23 @@
 <tbody>
 <tr>
 <td>API 응답을 그대로 보여줄 것인가?</td>
-<td></td>
+<td>추천 질문 구성에 따라 다름, 협의 필요</td>
 </tr>
 <tr>
 <td>LLM (Large Language Model: AI 언어 모델)이 요약해서 답변해야 하는가?</td>
-<td></td>
+<td>마사지 필요하지만 협의 필요, 테스트 결과 보고 문수 선임님이 최종 결정</td>
 </tr>
 <tr>
 <td>차트/표 형식이 필요한가?</td>
-<td></td>
+<td>패널에서도 표 및 차트를 보여줘야함 (내부에서 표 렌더링 필요)</td>
 </tr>
 <tr>
 <td>데이터 단위 변환이 필요한가? (예: 달러→원)</td>
-<td></td>
+<td>GenBI 결과만 가져오면 됨</td>
 </tr>
 <tr>
 <td>선호하는 답변 톤앤매너 (말투와 분위기)는? (격식, 친근, 전문적)</td>
-<td></td>
+<td>GenBI 프롬프트 확인 후 따라가면 됨</td>
 </tr>
 </tbody>
 </table>
@@ -1388,19 +1388,11 @@
 <tbody>
 <tr>
 <td>연동할 API가 여러 개인가?</td>
-<td></td>
+<td>get answer, handler</td>
 </tr>
 <tr>
 <td>각 API의 우선순위는?</td>
-<td></td>
-</tr>
-<tr>
-<td>비즈니스 영향도는? (높음/중간/낮음)</td>
-<td></td>
-</tr>
-<tr>
-<td>기술 난이도는? (높음/중간/낮음)</td>
-<td></td>
+<td>1순위 : Hi-D data, 2순위 : handler</td>
 </tr>
 </tbody>
 </table>
@@ -1417,23 +1409,19 @@
 <tbody>
 <tr>
 <td>API 장애 시 담당자 연락처는?</td>
-<td></td>
-</tr>
-<tr>
-<td>에스컬레이션 (상급자 보고) 절차는?</td>
-<td></td>
+<td>팀즈로 연락 가능 (그전에는 구메신저 실무자방에 연락)</td>
 </tr>
 <tr>
 <td>대체 방안은? (캐시: 임시 저장 데이터 사용, 대체 API 등)</td>
-<td></td>
+<td>git을 각자 로컬에 받아서  테스트는 가능</td>
 </tr>
 <tr>
 <td>목표 복구 시간은?</td>
-<td></td>
+<td>ASAP, 20분 넘으면 장애공지 올려야함</td>
 </tr>
 <tr>
 <td>사용자에게 보여줄 에러 메시지는?</td>
-<td></td>
+<td>필요시 GenBI 쪽 에러 양식 따라서 -&gt; 단, 영어를 한국어 변환 필요</td>
 </tr>
 </tbody>
 </table>
@@ -1449,23 +1437,23 @@
 <tbody>
 <tr>
 <td>Rate Limit (호출 횟수 제한)이 있는가? (예: 1000회/분)</td>
-<td></td>
+<td>X</td>
 </tr>
 <tr>
 <td>제한 초과 시 어떻게 되는가?</td>
-<td></td>
+<td>X</td>
 </tr>
 <tr>
 <td>모니터링 도구는? (Grafana, CloudWatch 등)</td>
-<td></td>
+<td>자체 모니터링 툴 (Grafana)</td>
 </tr>
 <tr>
 <td>알림을 받을 담당자는?</td>
-<td></td>
+<td>공동 책임 제도</td>
 </tr>
 <tr>
 <td>모니터링할 주요 지표는?</td>
-<td></td>
+<td>추후 지표 정의 필요</td>
 </tr>
 </tbody>
 </table>
@@ -1481,23 +1469,23 @@
 <tbody>
 <tr>
 <td>현재 API 버전은?</td>
-<td></td>
+<td>11월 1일</td>
 </tr>
 <tr>
 <td>버전업 계획이 있는가?</td>
-<td></td>
+<td>X</td>
 </tr>
 <tr>
 <td>현재 버전 지원 종료일은?</td>
-<td></td>
+<td>X</td>
 </tr>
 <tr>
 <td>변경 사항 사전 공지 기간은?</td>
-<td></td>
+<td>X</td>
 </tr>
 <tr>
 <td>하위 호환성이 보장되는가?</td>
-<td></td>
+<td>X</td>
 </tr>
 </tbody>
 </table>
@@ -1691,7 +1679,7 @@
 </tr>
 <tr>
 <td>목표 응답 시간은? (예: 5초 이내)</td>
-<td></td>
+<td>X (암묵적으로 10-15초 이내, spotfire 는 30초?)</td>
 </tr>
 <tr>
 <td>허용 가능한 에러율은?</td>
@@ -1771,7 +1759,7 @@
 </tr>
 <tr>
 <td>문서화 요구사항은?</td>
-<td></td>
+<td>인수인계 보고서, 전체적인 시스템 구성도</td>
 </tr>
 <tr>
 <td>교육이 필요한가?</td>
@@ -1805,7 +1793,7 @@
     <span class="md-icon" title="마지막 업데이트">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2025년 11월 12일 00:40:19 UTC">2025년 11월 12일</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2025년 11월 12일 01:16:35 UTC">2025년 11월 12일</span>
   </span>
 
     
