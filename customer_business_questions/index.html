@@ -715,17 +715,6 @@
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        프로젝트 시작 전 필수 체크리스트
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
         목적
       
     </span>
@@ -1130,12 +1119,8 @@
 
 
 <h1 id="hi-d-searchdata">Hi-D Search(Data) 연동을 위한 확인사항<a class="headerlink" href="#hi-d-searchdata" title="Permanent link">&para;</a></h1>
-<h2 id="_1">프로젝트 시작 전 필수 체크리스트<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p><strong>작성일</strong>: 2025-11-12<br />
-<strong>버전</strong>: v1.0</p>
-<hr />
-<h2 id="_2">목적<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>Hi-D Search(Data) API (Application Programming Interface: 프로그램 간 통신 인터페이스)를 Spotfire Copilot에 성공적으로 연동하기 위해 사전에 확인이 필요한 항목들을 정리한 문서입니다.</p>
+<h2 id="_1">목적<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>Hi-D Search(Data) API (Application Programming Interface: 프로그램 간 통신 인터페이스)를 Spotfire Copilot에 성공적으로 연동하기 위해 사전에 확인이 필요한 항목들을 정리한 문서</p>
 <p><strong>Hi-D Search(Data)란?</strong>
 - LG디스플레이의 지표 데이터 조회 시스템
 - 생산·품질·공정 등 분석 데이터 제공
@@ -1153,15 +1138,15 @@
 <tbody>
 <tr>
 <td>API의 공식 명칭은?</td>
-<td></td>
+<td>X (GenBI)</td>
 </tr>
 <tr>
 <td>API가 제공하는 주요 기능은?</td>
-<td></td>
+<td>get_answer : 질의</td>
 </tr>
 <tr>
 <td>조회 가능한 데이터 범위는? (예: 생산 지표, 품질 데이터 등)</td>
-<td></td>
+<td>MDW, MAS, EIS</td>
 </tr>
 <tr>
 <td>API 엔드포인트 URL은?</td>
@@ -1185,19 +1170,19 @@
 <tbody>
 <tr>
 <td>응답 데이터 형식은? (JSON, XML 등)</td>
-<td></td>
+<td>JSON</td>
 </tr>
 <tr>
 <td>주요 응답 필드는?</td>
-<td></td>
+<td>명세 전달 주심</td>
 </tr>
 <tr>
 <td>한국어 데이터가 제공되는가?</td>
-<td></td>
+<td>한국어 기본인데, 영중 가능</td>
 </tr>
 <tr>
 <td>데이터 업데이트 주기는? (실시간, 1분, 1시간, 1일 등)</td>
-<td></td>
+<td>일배치 (매일 아침 7시)</td>
 </tr>
 </tbody>
 </table>
@@ -1213,19 +1198,19 @@
 <tbody>
 <tr>
 <td>목표 응답 시간은? (예: 3초 이내)</td>
-<td></td>
+<td>X (암묵적으로 10-15초 이내, spotfire 는 30초?)</td>
 </tr>
 <tr>
 <td>SLA (Service Level Agreement: 서비스 수준 협약, 가용성)는? (예: 99.9%)</td>
-<td></td>
+<td>X</td>
 </tr>
 <tr>
 <td>사용량이 많은 시간대는?</td>
-<td></td>
+<td>보통 9-10, 13-14, 16-17</td>
 </tr>
 <tr>
 <td>한 번에 조회할 데이터 크기는?</td>
-<td></td>
+<td>200-500건</td>
 </tr>
 </tbody>
 </table>
@@ -1242,27 +1227,27 @@
 <tbody>
 <tr>
 <td>인증 방식은? (API Key, OAuth2: 인증 프로토콜, mTLS: 상호 인증 등)</td>
-<td></td>
+<td>X</td>
 </tr>
 <tr>
 <td>API Key 발급 절차는?</td>
-<td></td>
+<td>X</td>
 </tr>
 <tr>
 <td>테스트용 Key와 운영용 Key가 분리되는가?</td>
-<td></td>
+<td>X</td>
 </tr>
 <tr>
 <td>토큰 유효기간은? (해당 시)</td>
-<td></td>
+<td>X</td>
 </tr>
 <tr>
 <td>토큰 자동 갱신이 되는가?</td>
-<td></td>
+<td>X</td>
 </tr>
 <tr>
 <td>접근 권한 범위는? (읽기 전용, 읽기/쓰기)</td>
-<td></td>
+<td>X</td>
 </tr>
 </tbody>
 </table>
@@ -1310,7 +1295,7 @@
 <tbody>
 <tr>
 <td>API 호출 이력을 저장해야 하는가?</td>
-<td></td>
+<td>O (현재 기준 커스텀 패널 쪽 - 나누리s)</td>
 </tr>
 <tr>
 <td>로그 보관 기간은? (예: 3개월, 1년)</td>
@@ -1343,7 +1328,7 @@
 <tbody>
 <tr>
 <td>주요 사용자는? (예: 생산팀, 품질팀)</td>
-<td></td>
+<td>MAS 사용자 전체가 같이 확인함</td>
 </tr>
 <tr>
 <td>가장 많이 사용할 질문 3가지는?</td>
@@ -1820,7 +1805,7 @@
     <span class="md-icon" title="마지막 업데이트">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2025년 11월 12일 00:04:14 UTC">2025년 11월 12일</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2025년 11월 12일 00:40:19 UTC">2025년 11월 12일</span>
   </span>
 
     
